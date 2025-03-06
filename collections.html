@@ -1,1 +1,210 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections | Mortifère Luxury Fashion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    :root {
+      --cream-white: #faf9f6;
+      --old-money-green: #818c78;
+    }
+    .font-cormorant {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#135213',
+            secondary: '#A7B49E',
+            dark: '#A7B49E'
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '4px',
+            DEFAULT: '8px',
+            md: '12px',
+            lg: '16px',
+            xl: '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            full: '9999px',
+            button: '8px'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F5F1E8] font-cormorant">
+  <!-- Header -->
+  <header class="fixed w-full bg-[#818C78]/95 backdrop-blur-sm z-50">
+    <div class="container mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+        <div class="flex items-center space-x-6">
+          <button class="px-3 py-1.5 text-white hover:bg-white/10 rounded-full transition-all flex items-center gap-1 text-sm">
+            USD <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <button class="px-3 py-1.5 text-white hover:bg-white/10 rounded-full transition-all flex items-center gap-1 text-sm">
+            EN <i class="ri-arrow-down-s-line"></i>
+          </button>
+        </div>
+        <h1 class="text-3xl font-['Pacifico'] text-white">Mortifère</h1>
+        <div class="flex items-center space-x-4">
+          <button class="w-10 h-10 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-all">
+            <i class="ri-search-line text-xl"></i>
+          </button>
+          <button class="w-10 h-10 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-all">
+            <i class="ri-user-line text-xl"></i>
+          </button>
+          <div class="relative">
+            <button class="w-10 h-10 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-all">
+              <i class="ri-shopping-bag-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="py-4">
+        <ul class="flex justify-center space-x-12 text-sm tracking-widest">
+          <li>
+            <a href="collections.html" class="nav-link text-white hover:text-white/80 transition-colors">COLLECTIONS</a>
+          </li>
+          <li>
+            <a href="new-arrivals.html" class="nav-link text-gray-900 hover:text-secondary transition-colors">NEW ARRIVALS</a>
+          </li>
+          <li>
+            <a href="lookbook.html" class="nav-link text-gray-900 hover:text-secondary transition-colors">LOOKBOOK</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link text-gray-900 hover:text-secondary transition-colors">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="pt-[128px]">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/1980647fea96436a8a8652ae6312aa94.jpg')">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative text-center text-white">
+        <h2 class="text-5xl font-light mb-4">Collections</h2>
+        <p class="text-xl">Discover our curated collections</p>
+      </div>
+    </section>
+    <!-- Collections Grid -->
+    <section class="py-24 bg-[#F5F1E8]">
+      <div class="container mx-auto px-6">
+        <h3 class="text-4xl text-center mb-16">Featured Collections</h3>
+        <div class="grid grid-cols-3 gap-8">
+          <!-- Collection 1: Evening Wear -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden">
+              <img src="https://public.readdy.ai/ai/img_res/56e07500af089840e5511ba6f2c17c19.jpg" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Evening Wear" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="mt-6">
+              <h4 class="text-xl">Evening Wear</h4>
+              <p class="text-gray-600 mt-2">Timeless elegance for memorable nights</p>
+            </div>
+          </div>
+          <!-- Collection 2: Signature Collection -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden">
+              <img src="https://public.readdy.ai/ai/img_res/0a782e3104432a3cadb9ae63d11d2aaf.jpg" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Signature Collection" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="mt-6">
+              <h4 class="text-xl">Signature Collection</h4>
+              <p class="text-gray-600 mt-2">Defining modern sophistication</p>
+            </div>
+          </div>
+          <!-- Collection 3: Outerwear -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden">
+              <img src="https://public.readdy.ai/ai/img_res/c51f112c7b708a89d6925ab6111cf4d4.jpg" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Outerwear" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="mt-6">
+              <h4 class="text-xl">Outerwear</h4>
+              <p class="text-gray-600 mt-2">Refined protection for every season</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#F5F1E8] border-t border-gray-100">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-xl mb-6">About Mortifère</h4>
+          <p class="text-gray-600">Luxury fashion house creating timeless pieces for the sophisticated modern individual.</p>
+        </div>
+        <div>
+          <h4 class="text-xl mb-6">Customer Care</h4>
+          <ul class="space-y-4 text-gray-600">
+            <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact Us</a></li>
+            <li><a href="shipping-returns.html" class="hover:text-secondary transition-colors">Shipping & Returns</a></li>
+            <li><a href="size-guide.html" class="hover:text-secondary transition-colors">Size Guide</a></li>
+            <li><a href="faq.html" class="hover:text-secondary transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl mb-6">Legal</h4>
+          <ul class="space-y-4 text-gray-600">
+            <li><a href="privacy-policy.html" class="hover:text-secondary transition-colors">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="hover:text-secondary transition-colors">Terms of Service</a></li>
+            <li><a href="cookie-policy.html" class="hover:text-secondary transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl mb-6">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+              <i class="ri-instagram-line text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+              <i class="ri-facebook-line text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+              <i class="ri-twitter-x-line text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+              <i class="ri-pinterest-line text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-gray-100 text-center text-gray-600">
+        <p>&copy; 2025 Mortifère. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
