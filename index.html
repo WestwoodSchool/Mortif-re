@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mortifère | Luxury Fashion</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:root {
+--cream-white: #FAF9F6;
+--old-money-green: #818C78;
+}
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.nav-link { position: relative; }
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 1px;
+bottom: -2px;
+left: 0;
+background-color: white;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+.cart-popup {
+display: none;
+position: absolute;
+right: 0;
+top: 100%;
+width: 320px;
+background: white;
+border: 1px solid #e5e7eb;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+z-index: 50;
+}
+.cart-trigger:hover .cart-popup { display: block; }
+button {
+-webkit-tap-highlight-color: transparent;
+}
+button:active {
+transform: scale(0.98);
+}
+.product-popup {
+backdrop-filter: blur(8px);
+}
+.product-popup::before {
+content: '';
+position: absolute;
+bottom: -8px;
+left: 50%;
+transform: translateX(-50%);
+border-left: 8px solid transparent;
+border-right: 8px solid transparent;
+border-top: 8px solid white;
+}
+.thumbnail-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 4px;
+}
+.thumbnail-container img {
+transition: opacity 0.3s ease;
+}
+.quantity input::-webkit-inner-spin-button,
+.quantity input::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.quantity input {
+-moz-appearance: textfield;
+}
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#135213',
+secondary: '#A7B49E',
+dark: '#A7B49E'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-[#F5F1E8] font-cormorant">
+<header class="fixed w-full bg-[#818C78]/95 backdrop-blur-sm z-50">
+<div class="container mx-auto px-6">
+<div class="flex items-center justify-between py-4">
+<div class="flex items-center space-x-6">
+<button class="px-3 py-1.5 text-white hover:bg-white/10 rounded-full transition-all flex items-center gap-1 text-sm">
+USD <i class="ri-arrow-down-s-line"></i>
+</button>
+<button class="px-3 py-1.5 text-white hover:bg-white/10 rounded-full transition-all flex items-center gap-1 text-sm">
+EN <i class="ri-arrow-down-s-line"></i>
+</button>
+</div>
+<h1 class="text-3xl font-['Pacifico'] text-white">Mortifère</h1>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-all">
+<i class="ri-search-line text-xl"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-all">
+<i class="ri-user-line text-xl"></i>
+</button>
+<div class="cart-trigger relative">
+<button class="w-10 h-10 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-all">
+<i class="ri-shopping-bag-line text-xl"></i>
+</button>
+<div class="cart-popup p-4">
+<div class="text-center py-8">
+<p class="text-gray-500">Your cart is empty</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="py-4">
+<ul class="flex justify-center space-x-12 text-sm tracking-widest">
+<li><a href="#" class="nav-link text-white hover:text-white/80 transition-colors">COLLECTIONS</a></li>
+<li><a href="#" class="nav-link text-gray-900 hover:text-secondary transition-colors">NEW ARRIVALS</a></li>
+<li><a href="#" class="nav-link text-gray-900 hover:text-secondary transition-colors">LOOKBOOK</a></li>
+<li><a href="#" class="nav-link text-gray-900 hover:text-secondary transition-colors">ABOUT</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="pt-[128px]">
+<section class="relative h-screen">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/1980647fea96436a8a8652ae6312aa94.jpg')"></div>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="relative container mx-auto px-6 h-full flex items-center">
+<div class="max-w-2xl text-white">
+<h2 class="text-6xl font-light mb-6">Fall Winter 2025 Collection</h2>
+<p class="text-xl mb-8 opacity-90">Discover the epitome of sophistication with our latest collection, where timeless elegance meets contemporary luxury.</p>
+<button class="bg-secondary hover:bg-secondary/90 text-white px-12 py-4 !rounded-button transition-colors cursor-pointer">
+Explore Collection
+</button>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#F5F1E8]">
+<div class="container mx-auto px-6">
+<h3 class="text-4xl text-center mb-16">Featured Collections</h3>
+<div class="grid grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/56e07500af089840e5511ba6f2c17c19.jpg" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Evening Wear">
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="mt-6">
+<h4 class="text-xl">Evening Wear</h4>
+<p class="text-gray-600 mt-2">Timeless elegance for memorable nights</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/0a782e3104432a3cadb9ae63d11d2aaf.jpg" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Signature Collection">
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="mt-6">
+<h4 class="text-xl">Signature Collection</h4>
+<p class="text-gray-600 mt-2">Defining modern sophistication</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/c51f112c7b708a89d6925ab6111cf4d4.jpg" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Outerwear">
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="mt-6">
+<h4 class="text-xl">Outerwear</h4>
+<p class="text-gray-600 mt-2">Refined protection for every season</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#818C78]">
+<div class="container mx-auto px-6">
+<h3 class="text-4xl text-center mb-16 text-white">Latest Arrivals</h3>
+<div class="grid grid-cols-4 gap-6">
+<div class="group cursor-pointer relative">
+<div class="relative overflow-hidden bg-[#818C78] p-4">
+<div class="product-images relative">
+<img src="https://public.readdy.ai/ai/img_res/deeba9c2378c006b91e35224ba612d8a.jpg" class="w-full h-[400px] object-cover main-image" alt="Silk Blouse">
+<div class="absolute inset-0 opacity-0 transition-opacity duration-300 thumbnail-container flex">
+<img src="https://public.readdy.ai/ai/img_res/eac3eeee89f2102a387197a89d22adb7.jpg" class="w-full h-[400px] object-cover" alt="Silk Blouse Side">
+<img src="https://public.readdy.ai/ai/img_res/6fcd6d6b3da2627877fcd79a0485cd97.jpg" class="w-full h-[400px] object-cover" alt="Silk Blouse Back">
+</div>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 bg-white shadow-lg !rounded-full flex items-center justify-center hover:bg-gray-50">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+</div>
+</div>
+<div class="mt-4">
+<h4 class="text-lg">Silk Draped Blouse</h4>
+<p class="text-gray-600 mt-1">$890</p>
+</div>
+<div class="product-popup absolute left-1/2 -translate-x-1/2 bottom-full mb-4 w-[300px] bg-white rounded-lg shadow-xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10" style="pointer-events: none;">
+<div class="text-sm space-y-4">
+<div class="sizes">
+<p class="font-medium mb-2">Select Size:</p>
+<div class="flex gap-2">
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="XS">XS</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="S">S</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="M">M</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="L">L</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="quantity flex items-center border border-gray-200 !rounded-full">
+<button class="qty-btn minus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">-</button>
+<input type="text" class="w-12 text-center border-none" value="1" readonly>
+<button class="qty-btn plus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">+</button>
+</div>
+<button class="add-to-cart flex-1 bg-secondary text-white py-2 !rounded-button hover:bg-secondary/90 transition-colors">Add to Cart</button>
+</div>
+<div class="mt-4">
+<a href="#" class="text-xs text-gray-500 hover:text-secondary transition-colors">View Full Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer relative">
+<div class="relative overflow-hidden bg-[#818C78] p-4">
+<img src="https://public.readdy.ai/ai/img_res/d2bb9e29ae68517cec0fe2868e689a2b.jpg" class="w-full h-[400px] object-cover" alt="Trousers">
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 bg-white shadow-lg !rounded-full flex items-center justify-center hover:bg-gray-50">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+</div>
+</div>
+<div class="mt-4">
+<h4 class="text-lg">Tailored Wool Trousers</h4>
+<p class="text-gray-600 mt-1">$720</p>
+</div>
+<div class="product-popup absolute left-1/2 -translate-x-1/2 bottom-full mb-4 w-[300px] bg-white rounded-lg shadow-xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10" style="pointer-events: none;">
+<div class="text-sm space-y-4">
+<div class="sizes">
+<p class="font-medium mb-2">Select Size:</p>
+<div class="flex gap-2">
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="XS">XS</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="S">S</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="M">M</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="L">L</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="quantity flex items-center border border-gray-200 !rounded-full">
+<button class="qty-btn minus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">-</button>
+<input type="text" class="w-12 text-center border-none" value="1" readonly>
+<button class="qty-btn plus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">+</button>
+</div>
+<button class="add-to-cart flex-1 bg-secondary text-white py-2 !rounded-button hover:bg-secondary/90 transition-colors">Add to Cart</button>
+</div>
+<div class="mt-4">
+<a href="#" class="text-xs text-gray-500 hover:text-secondary transition-colors">View Full Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer relative">
+<div class="relative overflow-hidden bg-[#818C78] p-4">
+<img src="https://public.readdy.ai/ai/img_res/d8b52eff3dec85c2eb838b03b4f9c5b4.jpg" class="w-full h-[400px] object-cover" alt="Leather Bag">
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 bg-white shadow-lg !rounded-full flex items-center justify-center hover:bg-gray-50">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+</div>
+</div>
+<div class="mt-4">
+<h4 class="text-lg">Structured Leather Bag</h4>
+<p class="text-gray-600 mt-1">$1,590</p>
+</div>
+<div class="product-popup absolute left-1/2 -translate-x-1/2 bottom-full mb-4 w-[300px] bg-white rounded-lg shadow-xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10" style="pointer-events: none;">
+<div class="text-sm space-y-4">
+<div class="flex items-center gap-4">
+<div class="quantity flex items-center border border-gray-200 !rounded-full">
+<button class="qty-btn minus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">-</button>
+<input type="text" class="w-12 text-center border-none" value="1" readonly>
+<button class="qty-btn plus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">+</button>
+</div>
+<button class="add-to-cart flex-1 bg-secondary text-white py-2 !rounded-button hover:bg-secondary/90 transition-colors">Add to Cart</button>
+</div>
+<div class="mt-4">
+<a href="#" class="text-xs text-gray-500 hover:text-secondary transition-colors">View Full Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer relative">
+<div class="relative overflow-hidden bg-[#818C78] p-4">
+<img src="https://public.readdy.ai/ai/img_res/47bc6dc50332ccde5cde76932e0ffb6a.jpg" class="w-full h-[400px] object-cover" alt="Leather Boots">
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 bg-white shadow-lg !rounded-full flex items-center justify-center hover:bg-gray-50">
+<i class="ri-heart-line text-gray-600"></i>
+</button>
+</div>
+</div>
+<div class="mt-4">
+<h4 class="text-lg">Leather Ankle Boots</h4>
+<p class="text-gray-600 mt-1">$950</p>
+</div>
+<div class="product-popup absolute left-1/2 -translate-x-1/2 bottom-full mb-4 w-[300px] bg-white rounded-lg shadow-xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10" style="pointer-events: none;">
+<div class="text-sm space-y-4">
+<div class="sizes">
+<p class="font-medium mb-2">Select Size:</p>
+<div class="flex gap-2">
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="36">36</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="37">37</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="38">38</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="39">39</button>
+<button class="size-btn w-10 h-10 border border-gray-200 !rounded-full flex items-center justify-center hover:border-secondary transition-colors" data-size="40">40</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="quantity flex items-center border border-gray-200 !rounded-full">
+<button class="qty-btn minus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">-</button>
+<input type="text" class="w-12 text-center border-none" value="1" readonly>
+<button class="qty-btn plus w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">+</button>
+</div>
+<button class="add-to-cart flex-1 bg-secondary text-white py-2 !rounded-button hover:bg-secondary/90 transition-colors">Add to Cart</button>
+</div>
+<div class="mt-4">
+<a href="#" class="text-xs text-gray-500 hover:text-secondary transition-colors">View Full Details</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#F5F1E8]">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-2 gap-12 items-center">
+<div>
+<img src="https://public.readdy.ai/ai/img_res/df741cb0df6252d99f3ab782fd506cc3.jpg" class="w-full h-[600px] object-cover" alt="Editorial">
+</div>
+<div class="pl-12">
+<h3 class="text-4xl mb-6">The Art of Sophistication</h3>
+<p class="text-gray-600 text-lg leading-relaxed mb-8">
+Mortifère represents the pinnacle of luxury fashion, where each piece is crafted with unparalleled attention to detail and timeless elegance. Our collections embody the perfect balance of traditional craftsmanship and contemporary design.
+</p>
+<button class="bg-dark hover:bg-dark/90 text-white px-12 py-4 !rounded-button transition-colors cursor-pointer">
+Discover Our Story
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#818C78]">
+<div class="container mx-auto px-6">
+<h3 class="text-4xl text-center mb-16 text-white">Journal</h3>
+<div class="grid grid-cols-3 gap-8">
+<article class="group cursor-pointer">
+<div class="overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/2295d7e780fdc88bf5f391a598c5e0ad.jpg" class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Fashion Week">
+</div>
+<div class="mt-6">
+<h4 class="text-xl group-hover:text-secondary transition-colors">Paris Fashion Week Highlights</h4>
+<p class="text-gray-600 mt-2">Exploring the latest trends and innovations from the world's fashion capital.</p>
+<p class="text-gray-500 mt-4">March 4, 2025</p>
+</div>
+</article>
+<article class="group cursor-pointer">
+<div class="overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/492d8f72d8c19c24a594db5ba5b52526.jpg" class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Atelier">
+</div>
+<div class="mt-6">
+<h4 class="text-xl text-white group-hover:text-secondary transition-colors">Inside the Atelier</h4>
+<p class="text-gray-300 mt-2">A glimpse into the meticulous craftsmanship behind each Mortifère piece.</p>
+<p class="text-gray-400 mt-4">February 28, 2025</p>
+</div>
+</article>
+<article class="group cursor-pointer">
+<div class="overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/8c45e5a66be9354daaadc40c95d52ddb.jpg" class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Sustainability">
+</div>
+<div class="mt-6">
+<h4 class="text-xl text-white group-hover:text-secondary transition-colors">Sustainable Luxury</h4>
+<p class="text-gray-300 mt-2">Our commitment to responsible fashion and environmental consciousness.</p>
+<p class="text-gray-400 mt-4">February 20, 2025</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#F5F1E8]">
+<div class="container mx-auto px-6">
+<div class="max-w-xl mx-auto text-center">
+<h3 class="text-4xl mb-6">Join Our World</h3>
+<p class="text-gray-600 mb-8">Subscribe to receive exclusive updates, early access to collections, and personalized style recommendations.</p>
+<form class="flex gap-4">
+<input type="email" placeholder="Enter your email" class="flex-1 bg-transparent border border-gray-300 px-6 py-4 !rounded-button focus:outline-none focus:border-secondary text-gray-800 placeholder-gray-500">
+<button type="submit" class="bg-secondary hover:bg-secondary/90 px-8 py-4 !rounded-button transition-colors cursor-pointer whitespace-nowrap">
+Subscribe
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#F5F1E8] border-t border-gray-100">
+<div class="container mx-auto px-6 py-16">
+<div class="grid grid-cols-4 gap-8">
+<div>
+<h4 class="text-xl mb-6">About Mortifère</h4>
+<p class="text-gray-600">Luxury fashion house creating timeless pieces for the sophisticated modern individual.</p>
+</div>
+<div>
+<h4 class="text-xl mb-6">Customer Care</h4>
+<ul class="space-y-4 text-gray-600">
+<li><a href="#" class="hover:text-secondary transition-colors">Contact Us</a></li>
+<li><a href="#" class="hover:text-secondary transition-colors">Shipping & Returns</a></li>
+<li><a href="#" class="hover:text-secondary transition-colors">Size Guide</a></li>
+<li><a href="#" class="hover:text-secondary transition-colors">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xl mb-6">Legal</h4>
+<ul class="space-y-4 text-gray-600">
+<li><a href="#" class="hover:text-secondary transition-colors">Privacy Policy</a></li>
+<li><a href="#" class="hover:text-secondary transition-colors">Terms of Service</a></li>
+<li><a href="#" class="hover:text-secondary transition-colors">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xl mb-6">Follow Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+<i class="ri-instagram-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+<i class="ri-facebook-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+<i class="ri-twitter-x-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-600 hover:text-secondary transition-colors">
+<i class="ri-pinterest-line text-xl"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-gray-100 text-center text-gray-600">
+<p>&copy; 2025 Mortifère. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Heart button functionality
+const heartButtons = document.querySelectorAll('.ri-heart-line');
+heartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+this.classList.toggle('ri-heart-line');
+this.classList.toggle('ri-heart-fill');
+this.classList.toggle('text-secondary');
+});
+});
+// Product image hover
+document.querySelectorAll('.product-images').forEach(container => {
+const mainImage = container.querySelector('.main-image');
+const thumbnailContainer = container.querySelector('.thumbnail-container');
+container.addEventListener('mouseenter', () => {
+thumbnailContainer.style.opacity = '1';
+});
+container.addEventListener('mouseleave', () => {
+thumbnailContainer.style.opacity = '0';
+});
+});
+// Size selection
+document.querySelectorAll('.size-btn').forEach(btn => {
+btn.addEventListener('click', function() {
+document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('border-secondary'));
+this.classList.add('border-secondary');
+});
+});
+// Quantity buttons
+document.querySelectorAll('.quantity').forEach(container => {
+const input = container.querySelector('input');
+const minusBtn = container.querySelector('.minus');
+const plusBtn = container.querySelector('.plus');
+minusBtn.addEventListener('click', () => {
+let value = parseInt(input.value);
+if (value > 1) {
+input.value = value - 1;
+}
+});
+plusBtn.addEventListener('click', () => {
+let value = parseInt(input.value);
+if (value < 10) {
+input.value = value + 1;
+}
+});
+});
+// Add to cart
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+btn.addEventListener('click', function() {
+const size = this.closest('.product-popup').querySelector('.size-btn.border-secondary');
+if (!size) {
+const popup = document.createElement('div');
+popup.className = 'fixed top-4 right-4 bg-white shadow-lg rounded-lg p-4 z-50';
+popup.innerHTML = 'Please select a size';
+document.body.appendChild(popup);
+setTimeout(() => popup.remove(), 2000);
+return;
+}
+const popup = document.createElement('div');
+popup.className = 'fixed top-4 right-4 bg-secondary text-white shadow-lg rounded-lg p-4 z-50';
+popup.innerHTML = 'Added to cart successfully';
+document.body.appendChild(popup);
+setTimeout(() => popup.remove(), 2000);
+});
+});
+});
+</script>
+</body>
+</html>
